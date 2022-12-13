@@ -1,0 +1,296 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#bg{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+@media (max-width:1000px){
+    #bg {
+        flex-direction: column;
+    }
+    .div-left{
+        order: 1!important;
+    }
+    .div-right{
+        order: 2!important;
+    }
+    .jakob{
+        order: 3!important;
+        /* background-color: red; */
+    }
+    
+}
+
+@media (max-width:800px){
+    #bg {
+        flex-direction: column;
+    }
+    .div-left{
+        order: 1;
+    }
+    .div-right{
+        order: 2;
+    }
+    .jakob{
+        order: 3;
+        /* margin-bottom: 10px; */
+        /* transform: translate(0%,-10%); */
+        /* background-color: red; */
+    }
+    
+}
+@media (max-width:700px){
+    #bg {
+        flex-direction: column;
+    }
+    .div-left{
+        order: 1;
+    }
+    .div-right{
+        order: 2;
+    }
+    .jakob{
+        order: 3;
+        /* position: relative; */
+        /* bottom:none; */
+        /* margin-bottom: 10px; */
+        transform: translate(0%,25%);
+
+    }
+    #mouth{
+        transform:scale(2%);
+    }
+    
+}
+
+header {
+    position: sticky;
+    background-color: transparent; 
+    text-align: center;
+    /* vertical-align: top; */
+    top: 0;
+    width: 100%;
+    padding-top: 2px;
+    z-index: 5;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    /* font-size: 270%; */
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+
+
+.jakob{
+     position: fixed;
+     bottom: 0;
+     /* margin: auto; */
+     /* width: 70%; */
+     /* top: 0; */
+     /* left: 0; */
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     flex-direction: column;
+     order: 2;
+     /* min-height: 100vh; */
+     width: 100%;
+     /* background-color: blue; */
+     overflow-y: hidden;
+     overflow-x: hidden;
+
+     -webkit-tap-highlight-color: transparent;
+}
+
+.jakob:hover{
+    
+}
+
+@keyframes example {
+    0% {content: url("../../public/jakob-top2.png");}
+    94% {content: url("../../public/jakob-top2.png");}
+    95% {content: url("../../public/jakob-top2-closed.png");}
+}
+
+img.anim{
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* display: block; */
+    /* margin: auto; */
+
+    /* transform: translate(-50%, -50%); */
+    
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* width: 70%; */
+    /* min-width: 1160px; */
+    /* max-width: 1500px; */
+
+
+    content: url("../../public/jakob-top2.png");
+    animation-name: example;
+    animation-fill-mode: none;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    -webkit-tap-highlight-color: transparent;
+    /* background-color: purple; */
+
+}
+
+@keyframes breathing {
+    0% {content: url("../../public/jakob-bottom2.png");}
+    25% {content: url("../../public/jakob-bottom3.png");}
+    45% {content: url("../../public/jakob-bottom4.png");}
+    75% {content: url("../../public/jakob-bottom3.png");}
+}
+
+.bottom{
+    content: url("../../public/jakob-bottom2.png");
+    /* background-color: purple; */
+    margin-top:-5px;
+    margin-bottom:-5px;
+    /* margin:auto; */
+    animation-name: breathing;
+    animation-fill-mode: none;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-tap-highlight-color: transparent;
+}
+#mouth{
+    /* position:absolute; */
+    content: url("../../public/mouth.png");
+    /* margin: auto; */
+    /* position: absolute; */
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* width: 100%; */
+    /* min-width: 1160px;
+    max-width: 1500px; */
+    /* top: 35px; */
+    /* transform: translate(-70%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    -webkit-tap-highlight-color: transparent;
+    /* transform: scale(25%) translate(0%,100%) rotate(0.5turn); */
+    transform: scale(50%);
+    margin-top: -100px;
+    margin-bottom: -80px;
+    /* top: 450px; */
+    /* left: 350px; */
+    /* font-size: 16px;
+    padding: 12px 24px; */
+    /* border: none; */
+    /* cursor: pointer; */
+    /* border-radius: 5px; */
+    /* visibility: hidden; */
+    display:none;
+    
+}
+
+.div-right{
+
+    margin: auto;
+    /* align-items: flex-end; */
+    /* background-color: white; */
+    /* border-radius: 6px; */
+    z-index: 5;
+    /* float: right;
+    text-align: right;
+    width: 9%;
+    display: inline; */
+    order: 3;
+    
+}
+
+button.mid {
+    margin: auto;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    /* margin-top: 50%; */
+    /* vertical-align: middle; */
+    /* position: absolute; */
+    /* top:50%; */
+    /* transform: translateY(-50%); */
+    background-color: transparent;
+    color:lightgray;
+    font-size: 170%;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+}
+.div-left{
+    /* float: left; */
+    /* width: 10%; */
+    margin: auto;
+    order: 1;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+button.mid:hover{
+    text-shadow: 1px 1px 2px;
+    transition: .2s;
+}
+
+#eye{
+    position:absolute;
+    /* top:50vh;
+    left:50vw; */
+    transform: translate(990%,660%);
+    height: 50px;
+    width: 50px;
+    background:white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px 1px #222236ad;
+    z-index: -1;
+}
+
+#eyeBall{
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    height: 25px;
+    width:25px;
+    transform: translate(-50%,-50%);
+    background:lightblue;
+    border-radius: 50%;
+    transition:0;
+
+}
+
+#eye2{
+    position:absolute;
+    /* top:50vh;
+    left:50vw; */
+    transform: translate(1272%,655%);
+    /* transform: translate(170%,-130%); */
+    height: 50px;
+    width: 50px;
+    background:white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px 1px #222236ad;
+    z-index: -1;
+}
+
+#eyeBall2{
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    height: 25px;
+    width:25px;
+    transform: translate(-50%,-50%);
+    background:lightblue;
+    border-radius: 50%;
+    transition:0;
+
+}

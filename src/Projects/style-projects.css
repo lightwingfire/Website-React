@@ -1,0 +1,193 @@
+
+body{
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+@media (max-width:820px){
+    header{
+        /* z-index: -1; */
+    }
+    .container{
+        flex-direction: column !important;
+    }
+    .modalContainer{
+        flex-direction: column!important;
+    }
+    .popup{
+        flex-direction: column;
+    }
+    .modalTextBox{
+        height: fit-content!important;
+        max-width: 400px!important;
+        max-height: 800px!important;
+        min-width: 20px!important;
+        min-height: 20px!important;
+    }
+}
+@media (max-width:420px){
+    header{
+        /* z-index: -1; */
+    }
+    .container{
+        flex-direction: column !important;
+    }
+    .modalContainer{
+        flex-direction: column!important;
+    }
+    .popup{
+        flex-direction: column;
+    }
+    .modalTextBox{
+        height: fit-content!important;
+        max-width: 300px!important;
+        max-height: 800px!important;
+        min-width: 20px!important;
+        min-height: 20px!important;
+    }
+    #modalPicture{
+        /* position:relative; */
+        /* padding: 6px; */
+        max-width: 300px!important;
+        max-height: 300px!important;
+        /* border-radius: 12px; */
+    }
+    .item{
+        padding: 6px;
+        max-width: 300px!important;
+        max-height: 300px!important;
+    }
+    .item img{
+        max-width: 300px!important;
+        max-height: 300px!important;
+        border-radius: 12px;
+    }
+    .item p{
+        position: relative;
+        top: -330px!important;
+        right: -12px!important;
+        /* z-index: 2; */
+        font-size: 30px;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    
+}
+
+header {
+    position: sticky;
+    background-color: white; 
+    text-align: center;
+    /* vertical-align: top; */
+    top: 0;
+    width: 100vw;
+    /* padding-top: 2px; */
+    /* font-size: 270%; */
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+
+.mid {
+    margin: auto;
+    background-color: transparent;
+    color:lightgray;
+    font-size: 170%;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.back {
+    margin: auto;
+    background-color: transparent;
+    color:lightgray;
+    /* font-size: 170%; */
+    border: none;
+    cursor: pointer;
+    
+}
+.back:hover{
+    text-shadow: 1px 1px 2px;
+    transition: .2s;
+}
+
+.mid:hover{
+    text-shadow: 1px 1px 2px;
+    transition: .2s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    padding: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    transition: all .2s ease-in-out; 
+}
+.item:hover{
+    transform: scale(1.01);
+}
+.item img{
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 12px;
+}
+.item p{
+    position: relative;
+    top: -420px;
+    right: -15px;
+    /* z-index: 2; */
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.ReactModal__Overlay {
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    z-index: 6;
+}
+.popup{
+    background-color: whitesmoke;
+    z-index: 5;
+    /* margin-top: 25vh; */
+    border-radius: 12px;
+    width: fit-content;
+    display: flex;
+    align-self: center;
+    /* align-items: center; */
+}
+.exit{
+    text-align: right;
+    padding: 5px;
+    order:3;
+    
+}
+.modalContainer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    
+
+}
+
+#modalPicture{
+    position:relative;
+    padding: 6px;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 12px;
+}
+.modalTextBox{
+    position:relative;
+    text-align: center;
+    background-color: white;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 400px;
+    min-height: 400px;
+    border-radius: 12px;
+}
