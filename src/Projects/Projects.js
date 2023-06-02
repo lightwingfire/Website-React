@@ -46,18 +46,53 @@ function Projects() {
             </ReactModal>
 
             <div className='container'>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("taserGuitar")]}>
-
-                    <img src='taser-guitar.png' />
-                    <p>Taser Guitar</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("doorPuller")]}>
+                    <img src='doorPuller.png' />
+                    <p>Door Opener</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("dressPants")]}>
+                    <img src='dressPants.png' />
+                    <p>Dress Pants</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("headPhoneHanger")]}>
+                    <img src='headphonehanger.png' />
+                    <p>Headphone Hanger</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("stuffedDog")]}>
+                    <img src='stuffeddog.png' />
+                    <p>Stuffed Dog</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("TikTokGen")]}>
+                    <img src='reddittiktok.png' />
+                    <p>Reddit Tik-Tok Generator</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("SharpenerSpeedrun")]}>
+                    <img src='sharpen.png' />
+                    <p>Pencil Sharpener Speedrun</p>
                 </div>
                 <div className='item' onClick={() => [setModalOpen(true),setInfoKey("AAA")]}>
                     <img src='AAA.png' />
                     <p>Anti Anime Automata</p>
                 </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("TikTokGen")]}>
-                    <img src='reddittiktok.png' />
-                    <p>Reddit Tik-Tok Generator</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("taserGuitar")]}>
+                    <img src='taser-guitar.png' />
+                    <p>Taser Guitar</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("Klangschalter")]}>
+                    <img src='klangschalter.png' />
+                    <p>DAC Audio Changer</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("ICarly")]}>
+                    <img src='icarly.png' />
+                    <p>iCarly Remote</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("connectFourTrophy")]}>
+                    <img src='connectFourTrophy.png' />
+                    <p>Connect 4 Trophy</p>
+                </div>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("PencilHand")]}>
+                    <img src='pencilhand.png' />
+                    <p>Pencil Hand Holder</p>
                 </div>
                 <div className='item' onClick={() => [setModalOpen(true),setInfoKey("DiscordVizual")]}>
                     <img src='calander.png' />
@@ -67,33 +102,25 @@ function Projects() {
                     <img src='needy-duckling.png' />
                     <p>Needy Duckling</p>
                 </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("JTicTac")]}>
-                    <img src='tictactoe.png' />
-                    <p>Java Tic Tac Toe</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("RenFaire")]}>
+                    <img src='RenFaire.png' />
+                    <p>Ren Faire Costume</p>
                 </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("SharpenerSpeedrun")]}>
-                    <img src='sharpen.png' />
-                    <p>Pencil Sharpener Speedrun</p>
-                </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("PencilHand")]}>
-                    <img src='pencilhand.png' />
-                    <p>Pencil Hand Holder</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("ShoeBench")]}>
+                    <img src='bench.png' />
+                    <p>Shoe Bench</p>
                 </div>
                 <div className='item' onClick={() => [setModalOpen(true),setInfoKey("ArduinoTetris")]}>
                     <img src='tetris.png' />
                     <p>Arduino Tetris</p>
                 </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("RenFaire")]}>
-                    <img src='RenFaire.png' />
-                    <p>Ren Faire Costume</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("breadboardClock")]}>
+                    <img src='solderClock.png' />
+                    <p>Perfboard Clock</p>
                 </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("Klangschalter")]}>
-                    <img src='klangschalter.png' />
-                    <p>DAC Audio Changer</p>
-                </div>
-                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("ICarly")]}>
-                    <img src='icarly.png' />
-                    <p>iCarly Remote</p>
+                <div className='item' onClick={() => [setModalOpen(true),setInfoKey("JTicTac")]}>
+                    <img src='tictactoe.png' />
+                    <p>Java Tic Tac Toe</p>
                 </div>
                 
             </div>
