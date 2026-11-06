@@ -41,7 +41,14 @@ test('project cards open the matching accessible dialog and close it', () => {
   expect(titles.indexOf('Monster Stuffy')).toBeLessThan(titles.indexOf('Makeup Bag'));
   expect(titles.indexOf('PerfBoard Clock')).toBeLessThan(titles.indexOf('Java Tic Tac Toe'));
   for (const entry of Object.values(theInfo)) {
-    fireEvent.click(screen.getByRole('button', { name: `${entry.title} ${entry.title}` }));
+    const card = screen.getByRole('button', { name: `${entry.title} ${entry.title}` });
+    const image = card.querySelector('img');
+    if (!entry.image.startsWith('http')) {
+      expect(image.getAttribute('src')).toMatch(/^\/thumbnails\/.+\.webp$/);
+      expect(Number(image.getAttribute('width'))).toBeGreaterThan(0);
+      expect(Number(image.getAttribute('height'))).toBeGreaterThan(0);
+    }
+    fireEvent.click(card);
     const dialog = screen.getByRole('dialog', { name: entry.title });
     expect(dialog).toBeVisible();
     expect(screen.getByRole('heading', { name: entry.title })).toBeVisible();

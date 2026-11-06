@@ -3,6 +3,7 @@ import './project-modal.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { theInfo } from './projectData';
+import thumbnails from './thumbnails.json';
 import ReactModal from 'react-modal';
 
 const months = ['january', 'february', 'march', 'april', 'may', 'june',
@@ -69,7 +70,14 @@ function Projects() {
       <main className="container" aria-label="Projects">
         {projects.map(([id, entry]) => (
           <button type="button" className="item" key={id} onClick={() => setSelectedId(id)}>
-            <img src={imageSource(entry.image)} alt={entry.title} loading="lazy" />
+            <img
+              src={thumbnails[entry.image]?.src || imageSource(entry.image)}
+              width={thumbnails[entry.image]?.width}
+              height={thumbnails[entry.image]?.height}
+              alt={entry.title}
+              loading="lazy"
+              decoding="async"
+            />
             <p>{entry.title}</p>
           </button>
         ))}
