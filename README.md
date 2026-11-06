@@ -38,3 +38,10 @@ python scripts/generate_thumbnails.py
 
 Commit `public/thumbnails/` and `src/Projects/thumbnails.json` along with your changes.
 Python is only needed to regenerate thumbnails; the normal React build does not need it.
+
+## Last updated date
+
+The Projects page displays the date stamped into the production build. `npm run deploy`
+automatically runs that build before publishing, so each deployment updates the footer.
+The date uses America/New_York time and stays fixed until the next deployment.
+Local development shows ?available after deployment? instead of a visitor's current date.

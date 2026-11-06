@@ -229,7 +229,7 @@ const theInfo = {
     },
     subglassesholder:{
         image: "subglassesholder.png",
-        title: "Sub Glasses Holder",
+        title: "3D Printed Sunglasses Holder",
         date:"9/2026",
     },
     pinholder:{

@@ -84,8 +84,15 @@
 }
 
 
+/* Keep the portrait flush with the viewport edge. */
+.portrait-stage {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+
 .jakob{
-     position: fixed;
+     position: absolute;
      bottom: 0;
      /* margin: auto; */
      /* width: 70%; */

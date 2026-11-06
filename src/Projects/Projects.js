@@ -1,4 +1,5 @@
 import './style-projects.css';
+import LastUpdated from '../components/LastUpdated';
 import './project-modal.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -82,6 +83,7 @@ function Projects() {
           </button>
         ))}
       </main>
+      <LastUpdated />
     </div>
   );
 }
