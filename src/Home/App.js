@@ -1,14 +1,12 @@
-// import logo from './logo.svg';
 import './App.css';
 import './style.css';
-import { mouth, registerMoveEvents } from './script';
-import { useEffect } from 'react';
+import { useEyeTracking } from './useEyeTracking';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function App() {
-  useEffect(() => {
-    registerMoveEvents();
-  });
+  const [mouthOpen, setMouthOpen] = useState(false);
+  const eyeStyle = useEyeTracking();
   return (
     <div className="App">
       <header>
@@ -16,44 +14,44 @@ function App() {
       </header>
       <div id="bg" >
         <div className="div-right">
-          {/* <a href="projects.htm"> */}
-          <Link to="/Projects">
-            <button className="mid">&lt;= Projects</button>
-          </Link>
+          <Link to="/Projects" className="mid">&lt;= Projects</Link>
         </div>
         <div className="div-right">
-          <a href="Jakob Coughlan Resume.pdf">
-            <button className="mid">Resume ={'>'}</button>
-          </a>
+          <a href="/Jakob%20Coughlan%20Resume.pdf" className="mid">Resume =&gt;</a>
         </div>
         <div className="jakob">
           <div>
             <div id="eye">
-              <div id="eyeBall"></div>
+              <div id="eyeBall" style={eyeStyle}></div>
             </div>
             <div id="eye2">
-              <div id="eyeBall2"></div>
+              <div id="eyeBall2" style={eyeStyle}></div>
             </div>
-            <img className="anim" alt="Jakob" useMap="#workmap" />
+            <div className="portrait-top">
+              <img className="anim" src="/jakob-top2.png" width="1160" height="515" alt="Jakob" useMap="#workmap" />
+              <img className="portrait-blink" src="/jakob-top2-closed.png" width="1160" height="515" alt="" aria-hidden="true" />
+            </div>
 
             <map name="workmap">
-              <area shape="rect" coords="470,325,700,510" alt="Computer" href="#" onClick={mouth} title="Open Mouth" />
+              <area shape="rect" coords="470,325,700,510" alt="Toggle mouth" href="#" onClick={(event) => { event.preventDefault(); setMouthOpen((open) => !open); }} title="Toggle mouth" />
             </map>
           </div>
           <div >
-            <img id="mouth" alt="mouth" useMap="#teethMap" />
+            <img id="mouth" src="/mouth.png" alt="Contact and social links" useMap="#teethMap" style={{ display: mouthOpen ? 'block' : 'none' }} />
 
             <map name="teethMap">
-              <area shape="rect" coords="52,70,128,130" href="mailto:jakob.s.coughlan@gmail.com" target="_blank" alt="Email" title="Email" />
-              <area shape="" coords="160,70,250,131" href="https://www.linkedin.com/in/jakobcoughlan/" target="_blank" alt="Linkedin" title="Linkedin" />
-              <area shape="" coords="285,70,380,130" href="https://github.com/lightwingfire" target="_blank" alt="Github" title="Github" />
-              <area shape="" coords="400,40,470,130" href="https://twitter.com/lightwing22" target="_blank" alt="Twitter" title="Twitter" />
-              <area shape="" coords="500,70,590,130" href="https://www.youtube.com/channel/UCjXcP36wSpopWOkrin7fHHQ" target="_blank" alt="Youtube" title="Youtube" />
+              <area shape="rect" coords="52,70,128,130" href="mailto:jakob.s.coughlan@gmail.com" target="_blank" rel="noreferrer" alt="Email" title="Email" />
+              <area shape="rect" coords="160,70,250,131" href="https://www.linkedin.com/in/jakobcoughlan/" target="_blank" rel="noreferrer" alt="Linkedin" title="Linkedin" />
+              <area shape="rect" coords="285,70,380,130" href="https://github.com/lightwingfire" target="_blank" rel="noreferrer" alt="Github" title="Github" />
+              <area shape="rect" coords="400,40,470,130" href="https://twitter.com/lightwing22" target="_blank" rel="noreferrer" alt="Twitter" title="Twitter" />
+              <area shape="rect" coords="500,70,590,130" href="https://www.youtube.com/channel/UCjXcP36wSpopWOkrin7fHHQ" target="_blank" rel="noreferrer" alt="Youtube" title="Youtube" />
             </map>
           </div>
 
-          <div>
-            <img className="bottom" alt="jakob jaw" />
+          <div className="portrait-jaw">
+            <img className="jaw-frame jaw-rest" src="/jakob-bottom2.png" width="1160" height="358" alt="Jakob jaw" />
+            <img className="jaw-frame jaw-middle" src="/jakob-bottom3.png" width="1160" height="358" alt="" aria-hidden="true" />
+            <img className="jaw-frame jaw-deep" src="/jakob-bottom4.png" width="1160" height="358" alt="" aria-hidden="true" />
           </div>
 
         </div>

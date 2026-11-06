@@ -5,7 +5,10 @@ import App from './Home/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Projects from './Projects/Projects';
+import ReactModal from 'react-modal';
 
+
+ReactModal.setAppElement('#root');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +17,7 @@ root.render(
       <Route index element={<App />} />
       <Route path="Home" element={<App />} />
       <Route path="Projects" element={<Projects />} />
+      <Route path="*" element={<App />} />
     </Routes>
   </BrowserRouter>
 );

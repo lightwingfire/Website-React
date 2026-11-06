@@ -1,4 +1,4 @@
-body{
+.App{
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -69,7 +69,7 @@ body{
     
 }
 
-header {
+.App header {
     position: sticky;
     background-color: transparent; 
     text-align: center;
@@ -109,60 +109,60 @@ header {
     
 }
 
-@keyframes example {
-    0% {content: url("../../public/jakob-top2.png");}
-    94% {content: url("../../public/jakob-top2.png");}
-    95% {content: url("../../public/jakob-top2-closed.png");}
+/* Keep decoded image frames in place; swapping CSS content can flash. */
+.portrait-top,
+.portrait-jaw {
+    display: grid;
+    width: 1160px;
 }
 
-img.anim{
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 50%; */
-    /* display: block; */
-    /* margin: auto; */
+.portrait-top { height: 515px; }
+.portrait-jaw { height: 358px; margin-top: -5px; margin-bottom: -5px; }
 
-    /* transform: translate(-50%, -50%); */
-    
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* width: 70%; */
-    /* min-width: 1160px; */
-    /* max-width: 1500px; */
-
-
-    content: url("../../public/jakob-top2.png");
-    animation-name: example;
-    animation-fill-mode: none;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    -webkit-tap-highlight-color: transparent;
-    /* background-color: purple; */
-
-}
-
-@keyframes breathing {
-    0% {content: url("../../public/jakob-bottom2.png");}
-    25% {content: url("../../public/jakob-bottom3.png");}
-    45% {content: url("../../public/jakob-bottom4.png");}
-    75% {content: url("../../public/jakob-bottom3.png");}
-}
-
-.bottom{
-    content: url("../../public/jakob-bottom2.png");
-    /* background-color: purple; */
-    margin-top:-5px;
-    margin-bottom:-5px;
-    /* margin:auto; */
-    animation-name: breathing;
-    animation-fill-mode: none;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+.portrait-top img,
+.jaw-frame {
+    grid-area: 1 / 1;
+    display: block;
     -webkit-tap-highlight-color: transparent;
 }
+
+.portrait-blink {
+    pointer-events: none;
+    opacity: 0;
+    animation: portrait-blink 4s step-end infinite;
+}
+
+.jaw-frame { opacity: 0; }
+.jaw-rest { opacity: 1; animation: jaw-rest 3s step-end infinite; }
+.jaw-middle { animation: jaw-middle 3s step-end infinite; }
+.jaw-deep { animation: jaw-deep 3s step-end infinite; }
+
+@keyframes portrait-blink {
+    0%, 100% { opacity: 0; }
+    95% { opacity: 1; }
+}
+
+@keyframes jaw-rest {
+    0%, 95%, 100% { opacity: 1; }
+    25% { opacity: 0; }
+}
+
+@keyframes jaw-middle {
+    0%, 45%, 95%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+}
+
+@keyframes jaw-deep {
+    0%, 75%, 100% { opacity: 0; }
+    45% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portrait-blink, .jaw-frame { animation: none; }
+}
+
 #mouth{
     /* position:absolute; */
-    content: url("../../public/mouth.png");
     /* margin: auto; */
     /* position: absolute; */
     /* display: block; */
@@ -206,7 +206,7 @@ img.anim{
     
 }
 
-button.mid {
+.App .mid {
     margin: auto;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     /* margin-top: 50%; */
@@ -233,7 +233,7 @@ button.mid {
     z-index: 5;
 }
 
-button.mid:hover{
+.App .mid:hover{
     text-shadow: 1px 1px 2px;
     transition: .2s;
 }
@@ -294,3 +294,4 @@ button.mid:hover{
     transition:0;
 
 }
+.App .mid { text-decoration: none; }
