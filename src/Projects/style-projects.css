@@ -3,18 +3,12 @@
     overflow-x: clip;
 }
 @media (max-width:820px){
-    .Projects header{
-        /* z-index: -1; */
-    }
     .container{
         flex-direction: column !important;
     }
 
 }
 @media (max-width:420px){
-    .Projects header{
-        /* z-index: -1; */
-    }
     .container{
         flex-direction: column !important;
     }
@@ -44,12 +38,22 @@
     position: sticky;
     background-color: white;
     text-align: center;
-    /* vertical-align: top; */
     top: 0;
+    z-index: 10;
     width: 100%;
-    /* padding-top: 2px; */
-    /* font-size: 270%; */
+    box-sizing: border-box;
+    padding: 16px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
     font-family:"Lucida Console", "Courier New", monospace;
+}
+
+.Projects header h1 {
+    margin: 0 0 8px;
+}
+
+.Projects header h3 {
+    margin: 0 0 8px;
 }
 
 .mid {

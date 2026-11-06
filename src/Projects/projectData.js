@@ -189,7 +189,7 @@ const theInfo = {
     },
     beadsheetquilt:{
         image: "beadsheetquilt.png",
-        title: "Bead Sheet Quilt",
+        title: "Bed Sheet Quilt",
         date:"1/2025",
     },
     dprintspeaker:{
@@ -244,8 +244,28 @@ const theInfo = {
     },
     reestempprobe:{
         image: "reestempprobe.png",
-        title: "Rees Temp Probe",
+        title: "Rees Scientific Temp Probe",
         date:"10/2026",
+    },
+    macrestore:{
+        image: "90macrestore.png",
+        title: "Mac Restoration",
+        date:"11/2019",
+    },
+    bathmat:{
+        image: "bathmat.png",
+        title: "Bath Mat",
+        date:"8/2026",
+    },
+    RFM:{
+        image: "RFM.png",
+        title: "Rees Scientific Firmware Program",
+        date:"1/2026",
+    },
+    drawinggame:{
+        image: "drawinggame.png",
+        title: "React Drawing Game",
+        date:"7/2026",
     }
 }
 

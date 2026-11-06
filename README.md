@@ -15,9 +15,10 @@ npm start
 npm run build
 ```
 
-The output is in `build/`. Serve that directory with an SPA fallback to `index.html`
-so direct visits to `/Home` and `/Projects` work. `npm run deploy` publishes to
-GitHub Pages using the existing custom domain configuration.
+The output is in `build/`. The app uses hash routing (`/#/Home` and `/#/Projects`)
+so refreshing or opening a project-page link works on GitHub Pages without server
+rewrite rules. Use these hash URLs when sharing links. `npm run deploy` builds and
+publishes to GitHub Pages using the existing custom domain configuration.
 
 Home interactions use React state and an effect with event listener cleanup.
 Project content lives in `src/Projects/projectData.js`. Every entry automatically

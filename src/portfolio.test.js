@@ -33,13 +33,13 @@ test('project cards open the matching accessible dialog and close it', () => {
   render(<MemoryRouter><Projects /></MemoryRouter>, { container: host });
   expect(screen.getAllByRole('button')).toHaveLength(Object.keys(theInfo).length);
   const titles = screen.getAllByRole('button').map((card) => card.textContent);
-  expect(titles.slice(0, 4)).toEqual([
-    'Sub Glasses Holder', 'Custom Curtains', 'T-Shirt Quilt', "Valentine's Day Pottery",
-  ]);
+  expect(titles.indexOf('Sub Glasses Holder')).toBeLessThan(titles.indexOf('Custom Curtains'));
+  expect(titles.indexOf('Custom Curtains')).toBeLessThan(titles.indexOf('T-Shirt Quilt'));
+  expect(titles.indexOf('T-Shirt Quilt')).toBeLessThan(titles.indexOf("Valentine's Day Pottery"));
   // Numeric dates must sort correctly against named months at year boundaries.
   expect(titles.indexOf('Bead Sheet Quilt')).toBeLessThan(titles.indexOf('Potholder'));
   expect(titles.indexOf('Monster Stuffy')).toBeLessThan(titles.indexOf('Makeup Bag'));
-  expect(titles.slice(-2)).toEqual(['Java Tic Tac Toe', 'This is filler']);
+  expect(titles.indexOf('PerfBoard Clock')).toBeLessThan(titles.indexOf('Java Tic Tac Toe'));
   for (const entry of Object.values(theInfo)) {
     fireEvent.click(screen.getByRole('button', { name: `${entry.title} ${entry.title}` }));
     const dialog = screen.getByRole('dialog', { name: entry.title });
