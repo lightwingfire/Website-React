@@ -22,7 +22,7 @@ const theInfo = {
     },
     TikTokGen: {
         image: "reddittiktok.png",
-        title: "Reddit Tik Tok Generator",
+        title: "Reddit TikTok Generator",
         date: "August, 2022",
         text: "Like every Gen-Zer I am cripplingly addicted to Tik-tok. One of the biggest 'genres' of videos        on the platform are askreddit scrubs, where they take the top comments from an askreddit thread and have         the tts read them. I decided to write a script that would do it all automatically. It scrapes Reddit for         the top Ask Reddit threads, screenshots all the top comments, and edits together a video of the Tik Tok TTS reading         those comments.",
         link: "https://github.com/lightwingfire/Reddit-TikTok-Video-Generator"
@@ -127,7 +127,7 @@ const theInfo = {
     },
     breadboardClock: {
         image: "solderClock.png",
-        title: "PerfBoard Clock",
+        title: "Perfboard Clock",
         date: "May 2018",
         text: "I wanted to get into hobby electronics, and I thought making a clock would be a good jumping off point. I used a 555 timer to track                            the seconds and an ATmega328 to control the clock face. I learned how to pick and order electric components and how to program arduino,                            how to solder through-hole components and how to program a controller chip. I think that this was a great first project. If I were to                            do it again, I would do it without the microcontroller. That would be an interesting project.",
         link: "https://medium.com/@rxseger/notes-on-prototyping-circuit-boards-c5906e637123"
@@ -164,17 +164,17 @@ const theInfo = {
     },
     guchishyguy:{
         image: "guchishyguy.png",
-        title: "Guchi Shy Guy",
+        title: "Gucci Shy Guy",
         date:"8/2024",
     },
     OnePcoaster:{
         image: "OnePcoaster.png",
-        title: "One Piece Coaster",
+        title: "One Piece Coasters",
         date:"8/2024",
     },
     overmitts:{
         image: "overmitts.png",
-        title: "Over Mitts",
+        title: "Oven Mitts",
         date:"9/2024",
     },
     neoledsepta:{
@@ -184,7 +184,7 @@ const theInfo = {
     },
     potholder:{
         image: "potholder.png",
-        title: "Potholder",
+        title: "Pot Holder",
         date:"12/2024",
     },
     beadsheetquilt:{
